@@ -7,8 +7,13 @@ services:
        - custom:/kutt/custom
     environment:
       DB_FILENAME: "/var/lib/kutt/data.sqlite"
-    ports:
-      - 3000:3000
+    # ports:
+    #   - 3000:3000
+    network:
+      - npm_net
 volumes:
   db_data_sqlite:
   custom:
+networks:
+  npm_net:
+    external: true
