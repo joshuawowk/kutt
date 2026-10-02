@@ -9,7 +9,7 @@ services:
       DB_FILENAME: "/var/lib/kutt/data.sqlite"
     # ports:
     #   - 3000:3000
-    network:
+    networks:
       - npm_net
 volumes:
   db_data_sqlite:
